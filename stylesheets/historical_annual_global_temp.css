@@ -1,0 +1,48 @@
+h1 {
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-size: 28px;
+    color: #3498DB;
+    text-align: center;
+}
+
+#viz-container {
+      width: fit-content;
+      margin-inline: auto;
+}
+
+#svg1 {
+      width: 1500px;
+      height: 1000px;
+}
+
+.axis path, .axis line{
+    stroke: #333333;
+}
+
+#bot.axis text{
+    font-family: "Helvetica", "Arial", sans-serif; 
+    font-size: 10px;
+    font-weight: normal;
+    transform: rotate(-90deg) translate(-20px,-12px);
+    color: #333333;
+}
+
+#left.axis text{
+    font-family: "Helvetica", "Arial", sans-serif; 
+    font-size: 10px;
+    font-weight: normal;
+    color: #333333;
+}
+
+#tooltip {
+    position: absolute;
+    width: 100px;
+    height: 30px;
+    padding: 2px;    
+    text-align: center; 
+    font-family:sans-serif;
+    font-size: 12px;
+    font-weight: 550;
+    background: powderblue; 
+    border-radius: 8px;
+}
