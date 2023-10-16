@@ -73,10 +73,10 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
     svg_temp_anomaly.append("text")
                     .attr("x", 500)
                     .attr("y", 60)
-                    .text("Yearly Temperature Anomaly from 1850 - 2023")
+                    .text("Yearly Temperature Anomaly from 1991 - 2023")
                     .attr("font-size", "24px")
                     .attr("font-weight", "bold")
-                    .attr("fill", "#333333");
+                    .attr("fill", "#eeeeee");
 
     svg_temp_anomaly.append("text")
                     .attr("x", 1340)
@@ -84,7 +84,15 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                     .text("+ " + d3.max(dataset, d => d.anomaly).toFixed(3))
                     .attr("font-size", "28px")
                     .attr("font-weight", "bold")
-                    .attr("fill", "#FD0000");
+                    .attr("fill", temp_anomaly_color_scale_plus(d3.max(dataset, d => d.anomaly)));
+
+    // svg_temp_anomaly.append("text")
+    //                 .attr("x", 100)
+    //                 .attr("y", 770)
+    //                 .text(d3.min(dataset, d => d.anomaly).toFixed(3))
+    //                 .attr("font-size", "28px")
+    //                 .attr("font-weight", "bold")
+    //                 .attr("fill", temp_anomaly_color_scale_minus(d3.min(dataset, d => d.anomaly)));
 
     const tooltip = d3.select("body")
                     .append("div")
@@ -101,7 +109,8 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                         .style("opacity", 1)
                         .style("left", (event.pageX + 12) + "px")
                         .style("top", (event.pageY + 0) + "px")
-                        tooltip.html("Anomaly (deg C): " + "<br>" + d.anomaly.toFixed(3)); //truncating the emission value to round off
+                        tooltip.html("Anomaly (deg C): " + "<br>" + d.anomaly.toFixed(3)); //truncating the emission value to round of
+
                 })
                 .on("mouseout", (event, d) => {
                     d3.select("#tooltip")

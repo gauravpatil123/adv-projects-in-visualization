@@ -13,10 +13,11 @@ h1 {
 #svg1 {
       width: 1500px;
       height: 1000px;
+      background-color: #222222;
 }
 
 .axis path, .axis line{
-    stroke: #333333;
+    stroke: #eeeeee;
 }
 
 #bot.axis text{
@@ -24,14 +25,14 @@ h1 {
     font-size: 10px;
     font-weight: normal;
     transform: rotate(-90deg) translate(-20px,-12px);
-    color: #333333;
+    color: #eeeeee;
 }
 
 #left.axis text{
     font-family: "Helvetica", "Arial", sans-serif; 
     font-size: 10px;
     font-weight: normal;
-    color: #333333;
+    color: #eeeeee;
 }
 
 #tooltip {
@@ -43,6 +44,6 @@ h1 {
     font-family:sans-serif;
     font-size: 12px;
     font-weight: 550;
-    background: powderblue; 
+    background: #eeeeee; 
     border-radius: 8px;
 }
