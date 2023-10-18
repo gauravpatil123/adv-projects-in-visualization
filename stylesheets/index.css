@@ -1,0 +1,58 @@
+body {
+    background-color: #efefef;
+}
+
+.title {
+    margin-block: 3em;
+    text-align: center;
+    font-size: 2em;
+}
+
+.links-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-block: auto;
+}
+
+.link-item {
+    margin-inline: 1em;
+    border: 0.08em solid #333333;
+    padding: 0.5em;
+    border-radius: 0.5rem;
+    background-color: #efefef;
+    cursor:pointer;
+    transition: 0.2s ease-in-out;
+    box-shadow: -6px -6px 14px rgba(255, 255, 255, .7),
+                -6px -6px 10px rgba(255, 255, 255, .5),
+                6px 6px 8px rgba(255, 255, 255, .075),
+                6px 6px 10px rgba(0, 0, 0, .15);
+}
+
+.links {
+    text-decoration: none;
+}
+
+.viz-link {
+    text-decoration: none;
+    color: #333333;
+}
+
+.link-item:hover {
+    border-color: #FF6F40;
+    box-shadow: -2px -2px 6px rgba(255, 255, 255, .6),
+                -2px -2px 4px rgba(255, 255, 255, .4),
+                2px 2px 2px rgba(255, 255, 255, .05),
+                2px 2px 4px rgba(0, 0, 0, .1);
+}
+
+.link-item:hover .viz-link {
+    color: #1677F5;
+}
+
+.link-item:active {
+    box-shadow: inset -2px -2px 6px rgba(255, 255, 255, .7),
+                inset -2px -2px 4px rgba(255, 255, 255, .5),
+                inset 2px 2px 2px rgba(255, 255, 255, .075),
+                inset 2px 2px 4px rgba(0, 0, 0, .15);
+}
