@@ -2,6 +2,7 @@
 const margin = 100;
 const width = 1500;
 const height = 1000;
+var tooltip_text_color = "#eeeeee";
 
 //loading data
 d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(dataset => {
@@ -105,12 +106,13 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                     .join("rect")
                     .on("mouseover", (event, d) => {
                         d3.select("#tooltip")
+                        .style("color", tooltip_text_color)
                         .transition()
                         .duration(300)
                         .style("opacity", 1)
                         .style("left", (event.pageX + 12) + "px")
                         .style("top", (event.pageY + 0) + "px")
-                        tooltip.html("Anomaly (deg C): " + "<br>" + d.anomaly.toFixed(3)); //truncating the emission value to round of
+                        tooltip.html("Year: " + d.year + "<br>" + "Anomaly (deg C): " + "<br>" + d.anomaly.toFixed(3)); //truncating the emission value to round of
 
                 })
                 .on("mouseout", (event, d) => {
@@ -152,6 +154,7 @@ function darkMode() {
     darkModeProps.forEach( element => {
         [query, prop, value] = element;
         setCss(query, prop, value);
+        tooltip_text_color = "#111111";
     });
 };
 
@@ -159,6 +162,7 @@ function lightMode() {
     lightModeProps.forEach( element => {
         [query, prop, value] = element;
         setCss(query, prop, value);
+        tooltip_text_color = "#eeeeee";
     });
 };
 
