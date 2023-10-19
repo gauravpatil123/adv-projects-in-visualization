@@ -5,9 +5,18 @@
         <title>Historical Annual Global Temperature Anomaly</title>
         <script src="https://d3js.org/d3.v7.min.js"></script>
         <link rel="stylesheet" href="../stylesheets/historical_annual_global_temp.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     </head>
     <body>
-        <h1>Historical Annual Global Temperature Anomaly</h1>
+        <div class="title-container">
+            <div class="title">Historical Annual Global Temperature Anomaly</div>
+            <div class="toggle">
+                <label class="switch">
+                    <input id="toggle-button" type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </div>
+        </div>
         <div id="viz-container">
             <svg id="svg1"></svg>
         </div>

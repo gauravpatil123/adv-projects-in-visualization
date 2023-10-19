@@ -73,10 +73,11 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
     svg_temp_anomaly.append("text")
                     .attr("x", 500)
                     .attr("y", 60)
+                    .attr("class", "viz-title")
                     .text("Yearly Temperature Anomaly from 1991 - 2023")
                     .attr("font-size", "24px")
                     .attr("font-weight", "bold")
-                    .attr("fill", "#eeeeee");
+                    .attr("fill", "#111111");
 
     svg_temp_anomaly.append("text")
                     .attr("x", 1340)
@@ -124,3 +125,50 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                 });
 
 });
+
+const darkModeProps = [["#svg1", "background-color", "#111111"], 
+                        [".axis path", "stroke", "#eeeeee"],
+                        [".axis line", "stroke", "#eeeeee"],
+                        ["#bot.axis text", "color", "#eeeeee"],
+                        ["#left.axis text", "color", "#eeeeee"],
+                        ["#tooltip", "background", "#eeeeee"],
+                        [".viz-title", "fill", "#eeeeee"]];
+
+const lightModeProps = [["#svg1", "background-color", "#eeeeee"], 
+                        [".axis path", "stroke", "#111111"],
+                        [".axis line", "stroke", "#111111"],
+                        ["#bot.axis text", "color", "#111111"],
+                        ["#left.axis text", "color", "#111111"],
+                        ["#tooltip", "background", "#111111"],
+                        [".viz-title", "fill", "#111111"]];
+
+function setCss(querySelector, property, value) {
+
+    $(querySelector).css(property, value);
+    
+}
+
+function darkMode() {
+    darkModeProps.forEach( element => {
+        [query, prop, value] = element;
+        setCss(query, prop, value);
+    });
+};
+
+function lightMode() {
+    lightModeProps.forEach( element => {
+        [query, prop, value] = element;
+        setCss(query, prop, value);
+    });
+};
+
+async function main() {
+    $("#toggle-button").change(function() {
+
+        $("#toggle-button").is(":checked") ? darkMode() : lightMode();
+
+    });
+
+}
+
+main();
