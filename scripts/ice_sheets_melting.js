@@ -2,6 +2,7 @@
 const margin = 100;
 const width = 1000;
 const height = 800;
+var tooltip_text_color = "#eeeeee";
 
 //loading data
 d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
@@ -187,7 +188,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                 .call(rightAxis_mass);
 
         svg_mass.append("text")
-                .attr("x", 220)
+                .attr("x", 200)
                 .attr("y", 60)
                 .attr("class", "viz-title")
                 .text("Melted Ice Sheet Cummulative Mass (Sea level 10e-3 mm)")
@@ -240,7 +241,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                     .attr("id", "tooltip")
                     .style("opacity", 0);
 
-    function main() {
+    function charts() {
 
         chart_mass_gt();
 
@@ -272,6 +273,6 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
 
     }
 
-    main();
+     charts();
 
-})
+});
