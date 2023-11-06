@@ -15,7 +15,7 @@ d3.csv("../data/greenhouse gases/normalized_historical_ghg.csv").then(dataset =>
     // global variables
     const margin = 100;
     const width = 800;
-    const height = 800;
+    const height = 600;
 
     // start visualization with 1750 data
     function xScale(dataset_to_use){
@@ -121,13 +121,13 @@ d3.csv("../data/greenhouse gases/normalized_historical_ghg.csv").then(dataset =>
             .call(currLeftAxis);
 
         svg_ghg.append("text")
-            .attr("x", 120)
+            .attr("x", 190)
             .attr("y", 60)
             .attr("class", "title")
             .text("Top country's for total GHG emissions in the year " + currYear);
 
         svg_ghg.append("text")
-            .attr("x", 10)
+            .attr("x", 120)
             .attr("y", 460)
             .attr("class", "axis-labels")
             .text("Total GHG Emissions")
@@ -135,7 +135,7 @@ d3.csv("../data/greenhouse gases/normalized_historical_ghg.csv").then(dataset =>
 
         svg_ghg.append("text")
             .attr("x", 370)
-            .attr("y", 750)
+            .attr("y", 590)
             .attr("class", "axis-labels")
             .text("Countries")
 

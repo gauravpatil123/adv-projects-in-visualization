@@ -1,8 +1,13 @@
+.viz-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 svg {
     width:800px;
-    height:800px;
-    margin-left: auto; 
-    margin-right: auto;
+    height:600px;
+    margin-inline: 1em;
     display: block;
 }
 
@@ -14,15 +19,15 @@ svg {
 
 .sliderText {
     text-align: center;
-    font-size: 24px;
+    font-size: 19px;
     -webkit-text-fill-color: #333333;
     font-weight: bold;
 }
 
 .slidecontainer {
     width: 30%;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: 1em;
+    margin-block: auto;
 }
 
 .slider {
@@ -74,6 +79,7 @@ svg {
     font-size: 12px;
     font-weight: bold;
     color: black;
+    transform: rotate(-90deg) translate(-37px, -15px);
 }
 
 #left.axis text {
@@ -97,7 +103,7 @@ svg {
 }
 
 .title {
-    font-size: 24px;
+    font-size: 19px;
     font-weight: bold;
     fill: #333333;
 }
