@@ -1,8 +1,9 @@
 //Chart global variables
-const margin = 100;
-const width = 1500;
-const height = 1000;
+const margin = 80;
+const width = 1300;
+const height = 600;
 var tooltip_text_color = "#eeeeee";
+var axislabel_color = "#333333";
 
 //loading data
 d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(dataset => {
@@ -72,7 +73,7 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                             .call(leftAxis_temp_anomaly);
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 500)
+                    .attr("x", 420)
                     .attr("y", 60)
                     .attr("class", "viz-title")
                     .text("Yearly Temperature Anomaly from 1991 - 2023")
@@ -81,8 +82,8 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                     .attr("fill", "#111111");
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 1340)
-                    .attr("y", 100)
+                    .attr("x", 1160)
+                    .attr("y", 80)
                     .text("+ " + d3.max(dataset, d => d.anomaly).toFixed(3))
                     .attr("font-size", "28px")
                     .attr("font-weight", "bold")
@@ -95,6 +96,19 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
     //                 .attr("font-size", "28px")
     //                 .attr("font-weight", "bold")
     //                 .attr("fill", temp_anomaly_color_scale_minus(d3.min(dataset, d => d.anomaly)));
+
+    svg_temp_anomaly.append("text")
+                    .attr("x", 60)
+                    .attr("y", 450)
+                    .attr("class", "axis-labels")
+                    .text("Annual Temperature Annomaly (deg C)")
+                    .attr("transform", "rotate(-90, 50, 460)");
+
+    svg_temp_anomaly.append("text")
+                    .attr("x", 620)
+                    .attr("y", 580)
+                    .attr("class", "axis-labels")
+                    .text("Years");
 
     const tooltip = d3.select("body")
                     .append("div")
@@ -134,7 +148,8 @@ const darkModeProps = [["#svg1", "background-color", "#111111"],
                         ["#bot.axis text", "color", "#eeeeee"],
                         ["#left.axis text", "color", "#eeeeee"],
                         ["#tooltip", "background", "#eeeeee"],
-                        [".viz-title", "fill", "#eeeeee"]];
+                        [".viz-title", "fill", "#eeeeee"],
+                        [".axis-labels", "fill", "#eeeeee"]];
 
 const lightModeProps = [["#svg1", "background-color", "#eeeeee"], 
                         [".axis path", "stroke", "#111111"],
@@ -142,7 +157,8 @@ const lightModeProps = [["#svg1", "background-color", "#eeeeee"],
                         ["#bot.axis text", "color", "#111111"],
                         ["#left.axis text", "color", "#111111"],
                         ["#tooltip", "background", "#111111"],
-                        [".viz-title", "fill", "#111111"]];
+                        [".viz-title", "fill", "#111111"],
+                        [".axis-labels", "fill", "#333333"]];
 
 function setCss(querySelector, property, value) {
 
