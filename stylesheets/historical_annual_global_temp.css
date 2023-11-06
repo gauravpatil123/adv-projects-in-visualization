@@ -9,12 +9,12 @@
     font-size: 28px;
     color: #3498DB;
     text-align: right;
-    margin: 1em;
+    margin: 0.1em;
     flex: 2;
 }
 
 .toggle {
-    margin-inline: auto;
+    margin-inline: 1em;
     margin-block: auto;
     flex: 1
 }

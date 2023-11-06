@@ -14,15 +14,41 @@ body {
     color: #3498DB;
 }
 
-.button-container {
+#viz-container {
+    margin-inline: auto;
+    width: fit-content;
+    background-color: #eeeeee;
     display: flex;
     flex-direction: row;
+    justify-content: center;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
     width: fit-content;
     margin-inline: auto;
-    margin-block: 0.5em;
+    margin-block: auto;
+    background-color: #eeeeee;
+}
+
+.button-text {
+    text-align: center;
+    padding: 1em;
+    font-size: 19px;
+    font-family: sans-serif;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
 }
 
 .button {
+    min-width: 66px;
+    width: fit-content;
+    height: 20px;
+    text-align: center;
     padding: 0.5em;
     border: 0.08em solid #111111;
     border-radius: 0.5rem;
@@ -51,14 +77,9 @@ body {
                 inset 2px 2px 4px rgba(0, 0, 0, .15);
 }
 
-#viz-container {
-    margin-inline: auto;
-    width: fit-content;
-}
-
 #svg1 {
     width: 1000px;
-    height: 800px;
+    height: 600px;
     background-color: #eeeeee;
 }
 
