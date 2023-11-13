@@ -1,7 +1,7 @@
 //Chart global variables
 const margin = 100;
 const width = 1000;
-const height = 600;
+const height = 500;
 var tooltip_text_color = "#eeeeee";
 
 //loading data
@@ -123,7 +123,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                 .attr("fill", "#111111");
 
         svg_mass.append("text")
-                .attr("x", 100)
+                .attr("x", 150)
                 .attr("y", 460)
                 .attr("class", "axis-labels")
                 .text("Cummulative Mass Balance (Gt)")
@@ -131,7 +131,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
 
         svg_mass.append("text")
                 .attr("x", 480)
-                .attr("y", 540)
+                .attr("y", 440)
                 .attr("class", "axis-labels")
                 .text("Years")
 
@@ -197,7 +197,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                 .attr("fill", "#111111");
 
         svg_mass.append("text")
-                .attr("x", -280)
+                .attr("x", -350)
                 .attr("y", -500)
                 .attr("class", "axis-labels")
                 .text("Cummulative Mass Balance (micro meters)")
@@ -205,7 +205,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
 
         svg_mass.append("text")
                 .attr("x", 480)
-                .attr("y", 540)
+                .attr("y", 440)
                 .attr("class", "axis-labels")
                 .text("Years")
 
