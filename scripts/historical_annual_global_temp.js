@@ -1,7 +1,7 @@
 //Chart global variables
 const margin = 80;
 const width = 1300;
-const height = 600;
+const height = 500;
 var tooltip_text_color = "#eeeeee";
 var axislabel_color = "#333333";
 
@@ -98,7 +98,7 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
     //                 .attr("fill", temp_anomaly_color_scale_minus(d3.min(dataset, d => d.anomaly)));
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 60)
+                    .attr("x", 100)
                     .attr("y", 450)
                     .attr("class", "axis-labels")
                     .text("Annual Temperature Annomaly (deg C)")
@@ -106,7 +106,7 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
 
     svg_temp_anomaly.append("text")
                     .attr("x", 620)
-                    .attr("y", 580)
+                    .attr("y", 480)
                     .attr("class", "axis-labels")
                     .text("Years");
 
