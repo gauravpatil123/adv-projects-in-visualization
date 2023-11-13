@@ -84,7 +84,7 @@ d3.csv("../data/greenhouse gases/normalized_historical_ghg.csv").then(dataset =>
 
         currColorScale = d3.scaleLinear()
                             .domain([0, currMaxY])
-                            .range(["#F09D97","#DF544A"]); //#DF544A "#0052F9","#FAB10F"
+                            .range(["#F1C40F", "#FD0000"]); //#DF544A "#0052F9","#FAB10F" ["#F09D97","#DF544A"]
 
     }
 
