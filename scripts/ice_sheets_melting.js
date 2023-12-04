@@ -114,26 +114,23 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                 .call(leftAxis_mass);
 
         svg_mass.append("text")
-                .attr("x", 250)
+                .attr("x", 230)
                 .attr("y", 60)
                 .attr("class", "viz-title")
-                .text("Melted Ice Sheet Cummulative Mass (Gt)")
-                .attr("font-size", "24px")
-                .attr("font-weight", "bold")
-                .attr("fill", "#111111");
+                .text("MELTED ICE SHEET CUMULATIVE MASS (GT)");
 
         svg_mass.append("text")
-                .attr("x", 150)
-                .attr("y", 460)
+                .attr("x", 100)
+                .attr("y", 450)
                 .attr("class", "axis-labels")
-                .text("Cummulative Mass Balance (Gt)")
+                .text("CUMULATIVE MASS BALANCE (GT)")
                 .attr("transform", "rotate(-90, 50, 460)")
 
         svg_mass.append("text")
                 .attr("x", 480)
-                .attr("y", 440)
+                .attr("y", 460)
                 .attr("class", "axis-labels")
-                .text("Years")
+                .text("YEARS")
 
         svg_mass.selectAll("rect")
                 .data(dataset)
@@ -146,7 +143,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                     .style("opacity", 1)
                     .style("left", (event.pageX + 12) + "px")
                     .style("top", (event.pageY + 0) + "px")
-                    tooltip.html("Year: " + d.year + "<br>" + "Cumulative mass balance (Gt):" + "<br>" + d.mass_gt);
+                    tooltip.html("YEAR: " + d.year + "<br>" + "CUMULATIVE MASS BALANCE (GT):" + "<br>" + d.mass_gt);
     
             })
             .on("mouseout", (event, d) => {
@@ -188,26 +185,23 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                 .call(rightAxis_mass);
 
         svg_mass.append("text")
-                .attr("x", 200)
+                .attr("x", 120)
                 .attr("y", 60)
                 .attr("class", "viz-title")
-                .text("Melted Ice Sheet Cummulative Mass (Sea level 10e-3 mm)")
-                .attr("font-size", "24px")
-                .attr("font-weight", "bold")
-                .attr("fill", "#111111");
+                .text("MELTED ICE SHEET CUMULATIVE MASS (SEA LEVEL 10e-3 mm)");
 
         svg_mass.append("text")
-                .attr("x", -350)
+                .attr("x", -410)
                 .attr("y", -500)
                 .attr("class", "axis-labels")
-                .text("Cummulative Mass Balance (micro meters)")
+                .text("CUMULATIVE MASS BALANCE (MICRO METERS)")
                 .attr("transform", "rotate(90, 10, 460)")
 
         svg_mass.append("text")
                 .attr("x", 480)
-                .attr("y", 440)
+                .attr("y", 460)
                 .attr("class", "axis-labels")
-                .text("Years")
+                .text("YEARS")
 
         svg_mass.selectAll("rect")
                 .data(dataset)
@@ -220,7 +214,7 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                     .style("opacity", 1)
                     .style("left", (event.pageX + 12) + "px")
                     .style("top", (event.pageY + 0) + "px")
-                    tooltip.html("Year: " + d.year + "<br>" + "Cumulative mass balance (mm):" + "<br>" + d.mass_mm);
+                    tooltip.html("YEAR: " + d.year + "<br>" + "CUMULATIVE MASS BALANCE (mm):" + "<br>" + d.mass_mm);
 
         })
         .on("mouseout", (event, d) => {

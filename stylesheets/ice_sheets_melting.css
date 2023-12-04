@@ -85,13 +85,46 @@ body {
     background-color: #eeeeee;
 }
 
+.viz-title {
+    font-family: var(--viz-title-font);
+    font-size: 24px;
+    fill: #111111;
+}
+
+.axis-labels {
+    font-family: var(--viz-axis-labels-font);
+    font-size: 19px;
+}
+
+#bot.axis text{
+    font-family: var(--viz-axis-font); 
+    font-size: 9px;
+    font-weight: normal;
+    transform: rotate(-90deg) translate(-20px,-12px);
+    color: #111111;
+}
+
+#left.axis text{
+    font-family: var(--viz-axis-font); 
+    font-size: 9px;
+    font-weight: normal;
+    color: #111111;
+}
+
+#right.axis text{
+    font-family: var(--viz-axis-font); 
+    font-size: 9px;
+    font-weight: normal;
+    color: #111111;
+}
+
 #tooltip {
     position: absolute;
-    width: 100px;
-    height: 60px;
+    width: 140px;
+    height: fit-content;
     padding: 2px;    
     text-align: center; 
-    font-family:sans-serif;
+    font-family: var(--viz-axis-font);
     font-size: 12px;
     font-weight: 550;
     background: #111111; 
