@@ -149,7 +149,7 @@ d3.csv("../data/greenhouse gases/normalized_historical_ghg.csv").then(dataset =>
                 .style("opacity", 1)
                 .style("left", (event.pageX + 12) + "px")
                 .style("top", (event.pageY + 0) + "px")
-                tooltip.html("Total GHGs: " + "<br>" + Math.trunc(d.total_ghg)); //truncating the emission value to round off
+                tooltip.html("TOTAL GHGs: " + "<br>" + Math.trunc(d.total_ghg)); //truncating the emission value to round off
             })
             .on("mouseout", (event, d) => {
                 d3.select("#tooltip")
