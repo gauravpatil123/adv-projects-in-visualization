@@ -42,3 +42,12 @@
     font-family: "Inter Black";
     src: url("../assets/fonts/Inter/Inter-Black.ttf") format("truetype");
 }
+
+:root {
+
+    /*Viz Font Family*/
+    --viz-title-font: "Inter Bold";
+    --viz-axis-labels-font: "Inter Regular";
+    --viz-axis-font: "Inter Regular";
+
+}

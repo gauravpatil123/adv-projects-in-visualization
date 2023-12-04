@@ -121,23 +121,23 @@ d3.csv("../data/greenhouse gases/normalized_historical_ghg.csv").then(dataset =>
             .call(currLeftAxis);
 
         svg_ghg.append("text")
-            .attr("x", 190)
-            .attr("y", 60)
+            .attr("x", 100)
+            .attr("y", 80)
             .attr("class", "title")
-            .text("Top country's for total GHG emissions in the year " + currYear);
+            .text("TOP COUNTRIES FOR TOTAL GHG EMISSIONS IN THE YEAR " + currYear);
 
         svg_ghg.append("text")
             .attr("x", 120)
-            .attr("y", 460)
+            .attr("y", 450)
             .attr("class", "axis-labels")
-            .text("Total GHG Emissions")
+            .text("TOTAL GHG EMISSIONS")
             .attr("transform", "rotate(-90, 50, 460)")
 
         svg_ghg.append("text")
-            .attr("x", 370)
+            .attr("x", 340)
             .attr("y", 590)
             .attr("class", "axis-labels")
-            .text("Countries")
+            .text("COUNTRIES")
 
         svg_ghg.selectAll("rect")
                 .data(curr_data)

@@ -1,3 +1,5 @@
+@import "./global_variables.css";
+
 .viz-container {
     display: flex;
     flex-direction: row;
@@ -75,16 +77,16 @@ svg {
 }
 
 #bot.axis text {
-    font-family: sans-serif; 
-    font-size: 12px;
+    font-family: var(--viz-axis-font); 
+    font-size: 10px;
     font-weight: bold;
     color: black;
     transform: rotate(-90deg) translate(-37px, -15px);
 }
 
 #left.axis text {
-    font-family: sans-serif; 
-    font-size: 12px;
+    font-family: var(--viz-axis-font); 
+    font-size: 10px;
     font-weight: bold;
     color: black;
 }
@@ -103,12 +105,14 @@ svg {
 }
 
 .title {
+    font-family: var(--viz-title-font);
     font-size: 19px;
     font-weight: bold;
     fill: #333333;
 }
 
 .axis-labels {
+    font-family: var(--viz-axis-labels-font);
     font-size: 19px;
     font-weight: bold;
     fill: #333333;
