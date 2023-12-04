@@ -73,20 +73,16 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
                             .call(leftAxis_temp_anomaly);
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 420)
+                    .attr("x", 340)
                     .attr("y", 60)
                     .attr("class", "viz-title")
-                    .text("Yearly Temperature Anomaly from 1991 - 2023")
-                    .attr("font-size", "24px")
-                    .attr("font-weight", "bold")
-                    .attr("fill", "#111111");
+                    .text("YEARLY TEMPERATURE ANOMALY FROM 1991 - 2023")
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 1160)
+                    .attr("x", 1145)
                     .attr("y", 80)
+                    .attr("class", "max-temp")
                     .text("+ " + d3.max(dataset, d => d.anomaly).toFixed(3))
-                    .attr("font-size", "28px")
-                    .attr("font-weight", "bold")
                     .attr("fill", temp_anomaly_color_scale_plus(d3.max(dataset, d => d.anomaly)));
 
     // svg_temp_anomaly.append("text")
@@ -98,17 +94,17 @@ d3.csv("../data/global temperatutes/annual_temp_anomaly_filtered.csv").then(data
     //                 .attr("fill", temp_anomaly_color_scale_minus(d3.min(dataset, d => d.anomaly)));
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 100)
+                    .attr("x", 60)
                     .attr("y", 450)
                     .attr("class", "axis-labels")
-                    .text("Annual Temperature Annomaly (deg C)")
+                    .text("ANNUAL TEMPERATURE ANOMALY (deg C)")
                     .attr("transform", "rotate(-90, 50, 460)");
 
     svg_temp_anomaly.append("text")
-                    .attr("x", 620)
+                    .attr("x", 600)
                     .attr("y", 480)
                     .attr("class", "axis-labels")
-                    .text("Years");
+                    .text("YEARS");
 
     const tooltip = d3.select("body")
                     .append("div")

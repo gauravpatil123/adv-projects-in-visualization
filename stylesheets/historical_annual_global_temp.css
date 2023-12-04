@@ -1,3 +1,5 @@
+@import "./global_variables.css";
+
 .title-container {
     display: flex;
     flex-direction: row;
@@ -81,21 +83,27 @@ input:checked + .slider:before {
       background-color: #eeeeee;
 }
 
+.viz-title {
+    font-family: var(--viz-title-font);
+    font-size: 24px;
+    fill: #111111;
+}
+
 .axis path, .axis line{
     stroke: #111111;
 }
 
 #bot.axis text{
-    font-family: "Helvetica", "Arial", sans-serif; 
-    font-size: 10px;
+    font-family: var(--viz-axis-font); 
+    font-size: 9px;
     font-weight: normal;
     transform: rotate(-90deg) translate(-20px,-12px);
     color: #111111;
 }
 
 #left.axis text{
-    font-family: "Helvetica", "Arial", sans-serif; 
-    font-size: 10px;
+    font-family: var(--viz-axis-font); 
+    font-size: 9px;
     font-weight: normal;
     color: #111111;
 }
@@ -103,10 +111,10 @@ input:checked + .slider:before {
 #tooltip {
     position: absolute;
     width: 100px;
-    height: 40px;
+    height: fit-content;
     padding: 2px;    
     text-align: center; 
-    font-family:sans-serif;
+    font-family: var(--viz-axis-font);
     font-size: 12px;
     font-weight: 550;
     background: #111111; 
@@ -114,6 +122,11 @@ input:checked + .slider:before {
 }
 
 .axis-labels {
+    font-family: var(--viz-axis-labels-font);
     font-size: 19px;
-    font-weight: bold;
+}
+
+.max-temp {
+    font-family: var(--viz-axis-font-bold);
+    font-size: 28px;
 }
