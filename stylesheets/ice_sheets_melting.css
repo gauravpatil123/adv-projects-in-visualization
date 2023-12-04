@@ -1,7 +1,7 @@
 @import "./global_variables.css";
 
 body {
-    background-color: #eeeeee;
+    background-color: white;
 }
 
 .title-container {
@@ -19,7 +19,7 @@ body {
 #viz-container {
     margin-inline: auto;
     width: fit-content;
-    background-color: #eeeeee;
+    background-color: white;
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -31,7 +31,7 @@ body {
     width: fit-content;
     margin-inline: auto;
     margin-block: auto;
-    background-color: #eeeeee;
+    background-color: white;
 }
 
 .button-text {
@@ -83,6 +83,8 @@ body {
     width: 1000px;
     height: 500px;
     background-color: #eeeeee;
+    border: 0.01em solid #111111;
+    border-radius: 2em;
 }
 
 .viz-title {
