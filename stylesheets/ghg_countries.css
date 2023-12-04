@@ -10,7 +10,10 @@ svg {
     width:800px;
     height:600px;
     margin-inline: 1em;
+    margin-top: 1em;
     display: block;
+    border-radius: 2em;
+    background-color: #eeeeee;
 }
 
 .rects:hover {
@@ -23,13 +26,16 @@ svg {
     text-align: center;
     font-size: 19px;
     -webkit-text-fill-color: #333333;
-    font-weight: bold;
+    font-family: var(--viz-axis-font-bold);
 }
 
 .slidecontainer {
     width: 30%;
     margin-inline: 1em;
     margin-block: auto;
+    background-color: #eeeeee;
+    padding: 2em;
+    border-radius: 2em;
 }
 
 .slider {
@@ -74,6 +80,7 @@ svg {
     height: 10px;
     line-height: 40px;
     margin-bottom: 0px;
+    font-family: var(--viz-axis-font);
 }
 
 #bot.axis text {
