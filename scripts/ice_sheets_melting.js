@@ -191,8 +191,8 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
                 .text("MELTED ICE SHEET CUMULATIVE MASS (SEA LEVEL 10e-3 mm)");
 
         svg_mass.append("text")
-                .attr("x", -410)
-                .attr("y", -500)
+                .attr("x", -420)
+                .attr("y", -490)
                 .attr("class", "axis-labels")
                 .text("CUMULATIVE MASS BALANCE (MICRO METERS)")
                 .attr("transform", "rotate(90, 10, 460)")
@@ -270,3 +270,16 @@ d3.csv("../data/ice sheets/years ice sheets gt + mm.csv").then(dataset => {
      charts();
 
 });
+
+function button_active() {
+        $(".button").on("click", function() {
+                $(".bs").removeClass("button-active");
+                $(this).addClass("button-active");
+        });
+}
+
+function main() {
+        button_active();
+}
+
+main();

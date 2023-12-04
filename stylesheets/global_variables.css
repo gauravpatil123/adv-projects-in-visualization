@@ -51,4 +51,10 @@
     --viz-axis-font: "Inter Regular";
     --viz-axis-font-bold: "Inter Bold";
 
+    --buttons-background: rgba(22, 22, 23, 1.0);
+    --button: rgba(239, 239, 239, 0.6);
+    --button-hover: rgba(255, 255, 255, 0.8);
+    --button-selected: rgba(255, 255, 255, 1.0);
+
+
 }
