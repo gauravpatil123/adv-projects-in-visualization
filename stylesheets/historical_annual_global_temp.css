@@ -75,12 +75,14 @@ input:checked + .slider:before {
 #viz-container {
       width: fit-content;
       margin-inline: auto;
+      margin-top: 2em;
 }
 
 #svg1 {
       width: 1300px;
       height: 500px;
       background-color: #eeeeee;
+      border-radius: 2em;
 }
 
 .viz-title {
