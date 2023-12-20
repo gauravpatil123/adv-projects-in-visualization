@@ -3,20 +3,21 @@ body {
 }
 
 .title {
-    margin-block: 3em;
+    margin-block: 2em;
     text-align: center;
     font-size: 2em;
 }
 
 .links-container {
     display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
+    flex-direction: column;
     margin-block: auto;
 }
 
 .link-item {
-    margin-inline: 1em;
+    width: 20lvw;
+    margin-inline: auto;
+    margin-block: 0.75em;
     border: 0.08em solid #333333;
     padding: 0.5em;
     border-radius: 0.5rem;
