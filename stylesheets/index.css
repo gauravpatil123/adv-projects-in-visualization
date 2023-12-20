@@ -16,6 +16,7 @@ body {
 
 .link-item {
     width: 20lvw;
+    text-align: center;
     margin-inline: auto;
     margin-block: 0.75em;
     border: 0.08em solid #333333;
